@@ -41,10 +41,13 @@ public class GameView {
         System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
         String selectedNum =  Console.readLine();
         int userSelectedMenuNum = Integer.parseInt(selectedNum);
+        validateMenuInput(userSelectedMenuNum);
+        return userSelectedMenuNum;
+    }
 
+    private static void validateMenuInput(int userSelectedMenuNum) {
         if (userSelectedMenuNum != NEW_GAME && userSelectedMenuNum != QUIT) {
             throw new IllegalArgumentException();
         }
-        return userSelectedMenuNum;
     }
 }
