@@ -14,12 +14,12 @@ public class GameView {
     public static ArrayList<Integer> inputNum() {
         System.out.print("숫자를 입력해주세요 : ");
         String inputStr = Console.readLine();
-        ArrayList<Integer> baseballs = new ArrayList<>();
+        ArrayList<Integer> inputBaseballs = new ArrayList<>();
         for (String number : inputStr.split("")) {
-            baseballs.add(Integer.parseInt(number));
+            inputBaseballs.add(Integer.parseInt(number));
         }
-        validateInput(baseballs);
-        return baseballs;
+        validateInput(inputBaseballs);
+        return inputBaseballs;
     }
 
     public static boolean isKeepGoingGame() {
