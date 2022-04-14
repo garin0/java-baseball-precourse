@@ -7,7 +7,7 @@ import baseball.view.GameView;
 public class Application {
     public static void main(String[] args) {
         do {
-            BaseBall answerBaseballs = Game.generateBaseballs();
+            BaseBall answerBaseballs = new BaseBall();
             Game.play(answerBaseballs);
         } while(GameView.isKeepGoingGame());
     }

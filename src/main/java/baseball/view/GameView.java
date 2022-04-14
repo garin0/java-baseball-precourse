@@ -1,5 +1,6 @@
 package baseball.view;
 
+import baseball.common.Message;
 import camp.nextstep.edu.missionutils.Console;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class GameView {
     private static final int BASEBALL_SIZE = 3;
 
     public static ArrayList<Integer> inputNum() {
-        System.out.print("숫자를 입력해주세요 : ");
+        System.out.print(Message.GAME_START);
         String inputStr = Console.readLine();
         ArrayList<Integer> inputBaseballs = new ArrayList<>();
         for (String number : inputStr.split("")) {
@@ -29,16 +30,17 @@ public class GameView {
 
     private static void validateInput(ArrayList<Integer> baseballs) {
         if (baseballs.size() < BASEBALL_SIZE || baseballs.size() > BASEBALL_SIZE) {
-            throw new IllegalArgumentException("세자리로 입력해주세요.");
+            throw new IllegalArgumentException(Message.ERROR_INPUT_COUNT);
         }
+
         Set<Integer> baseBallSet = new HashSet<>(baseballs);
         if (baseballs.size() != baseBallSet.size()) {
-            throw new IllegalArgumentException("중복된 숫자가 존재합니다.");
+            throw new IllegalArgumentException(Message.ERROR_DUPLICATED);
         }
     }
 
     private static int getSelectedMenu() {
-        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+        System.out.println(Message.GAME_END);
         String selectedNum =  Console.readLine();
         int userSelectedMenuNum = Integer.parseInt(selectedNum);
         validateMenuInput(userSelectedMenuNum);
