@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class GameView {
+public class BaseBallGameView {
     private static final int NEW_GAME = 1;
     private static final int QUIT = 2;
     private static final int BASEBALL_SIZE = 3;

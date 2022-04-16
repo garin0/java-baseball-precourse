@@ -1,15 +1,15 @@
 package baseball;
 
-import baseball.domain.BaseBall;
-import baseball.domain.Game;
-import baseball.view.GameView;
+import baseball.domain.BaseBallAnswerGenerator;
+import baseball.domain.BaseBallGame;
+import baseball.view.BaseBallGameView;
 
 public class Application {
     public static void main(String[] args) {
         do {
-            BaseBall answerBaseballs = new BaseBall();
-            Game.play(answerBaseballs);
-        } while(GameView.isKeepGoingGame());
+            BaseBallGame baseBallGame = new BaseBallGame();
+            baseBallGame.play(new BaseBallAnswerGenerator());
+        } while(BaseBallGameView.isKeepGoingGame());
 
     }
 }

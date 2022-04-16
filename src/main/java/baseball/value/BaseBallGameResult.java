@@ -1,12 +1,13 @@
-package baseball.domain;
+package baseball.value;
 
 import baseball.common.Message;
+import baseball.domain.BaseBallAnswerGenerator;
 
-public class GameResult {
+public class BaseBallGameResult {
     private int strikeCount;
     private int ballCount;
 
-    public GameResult(int strikeCount, int ballCount) {
+    public BaseBallGameResult(int strikeCount, int ballCount) {
         this.strikeCount = strikeCount;
         this.ballCount = ballCount;
     }
@@ -27,7 +28,7 @@ public class GameResult {
     }
 
     private void printAllStrike() {
-        if (strikeCount == BaseBall.BASEBALL_SIZE) {
+        if (strikeCount == BaseBallAnswerGenerator.BASEBALL_SIZE) {
             System.out.println(strikeCount + Message.STRIKE_MESSAGE);
             return;
         }
