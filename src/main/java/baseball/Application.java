@@ -10,5 +10,6 @@ public class Application {
             BaseBall answerBaseballs = new BaseBall();
             Game.play(answerBaseballs);
         } while(GameView.isKeepGoingGame());
+
     }
 }

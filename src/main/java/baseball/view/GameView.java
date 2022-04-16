@@ -23,11 +23,13 @@ public class GameView {
         return inputBaseballs;
     }
 
+    // 게임 계속 진행할지 여부
     public static boolean isKeepGoingGame() {
         int selectedMenu = getSelectedMenu();
         return selectedMenu == NEW_GAME;
     }
 
+    // 인풋 숫자 validation
     private static void validateInput(ArrayList<Integer> baseballs) {
         if (baseballs.size() < BASEBALL_SIZE || baseballs.size() > BASEBALL_SIZE) {
             throw new IllegalArgumentException(Message.ERROR_INPUT_COUNT);
@@ -39,6 +41,7 @@ public class GameView {
         }
     }
 
+    // 메뉴 선정
     private static int getSelectedMenu() {
         System.out.println(Message.GAME_END);
         String selectedNum =  Console.readLine();
@@ -47,6 +50,7 @@ public class GameView {
         return userSelectedMenuNum;
     }
 
+    // 메뉴 input validation
     private static void validateMenuInput(int userSelectedMenuNum) {
         if (userSelectedMenuNum != NEW_GAME && userSelectedMenuNum != QUIT) {
             throw new IllegalArgumentException();

@@ -17,11 +17,4 @@ public class BaseBall {
             this.pickedBalls.add(randomNum);
         }
     }
-
-    @Override
-    public String toString() {
-        return "BaseBall{" +
-                "pickedBalls=" + pickedBalls +
-                '}';
-    }
 }
