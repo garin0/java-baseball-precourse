@@ -16,6 +16,10 @@ public class BaseBallGameResult {
         return strikeCount;
     }
 
+    public int getBallCount() {
+        return ballCount;
+    }
+
     // 게임 결과 프린트
     public void printGameResult() {
         printAllStrike();

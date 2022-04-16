@@ -6,14 +6,13 @@ import baseball.view.BaseBallGameView;
 
 import java.util.ArrayList;
 import java.util.List;
-// game <-/-> baseBall
-// game <-> playable (baseball, basketball, soccer, elden ring)
 
 public class BaseBallGame {
     public void play(BaseBallAnswerGenerator answerBaseballs) {
         boolean isAnswer;
         do {
-            List<Integer> inputBaseballs = BaseBallGameView.inputNum();
+            BaseBallGameView view = new BaseBallGameView();
+            List<Integer> inputBaseballs = view.getUserInputNumber();
             isAnswer = isMatchedAnswer(answerBaseballs, inputBaseballs);
         } while(!isAnswer);
         System.out.println(Message.GAME_WIN);

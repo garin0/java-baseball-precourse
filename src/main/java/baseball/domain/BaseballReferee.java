@@ -24,7 +24,7 @@ public class BaseballReferee {
     }
 
     // 볼 갯수 세기
-    public int countBall(List<Integer> user, int idx) {
+    private int countBall(List<Integer> user, int idx) {
         if (computer.contains(user.get(idx)) && countStrike(user, idx) == 0) {
             return 1;
         }
