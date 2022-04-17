@@ -4,7 +4,6 @@ import baseball.value.BaseBallGameResult;
 
 import java.util.List;
 
-// 사용자 입력과 answer 비교
 public class BaseballReferee {
     private final List<Integer> computer;
 

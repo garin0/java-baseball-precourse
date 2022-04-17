@@ -8,13 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BaseBallGame {
+    // 게임 시작
     public void play(BaseBallAnswerGenerator answerBaseballs) {
         boolean isAnswer;
         do {
             BaseBallGameView view = new BaseBallGameView();
             List<Integer> inputBaseballs = view.getUserInputNumber();
             isAnswer = isMatchedAnswer(answerBaseballs, inputBaseballs);
-        } while(!isAnswer);
+        } while(!isAnswer); // 종료할때까지 게임 반복 실행
         System.out.println(Message.GAME_WIN);
     }
 
@@ -23,9 +24,10 @@ public class BaseBallGame {
         ArrayList<Integer> answerList = new ArrayList<>(answer.generatedBaseBalls);
         BaseballReferee baseballReferee = new BaseballReferee(answerList);
 
+        // 정답 체크
         BaseBallGameResult result = baseballReferee.matchBalls(input);
         result.printGameResult();
-        if (result.getStrikeCount() == BaseBallAnswerGenerator.BASEBALL_SIZE) {
+        if (result.getStrikeCount() == BaseBallAnswerGenerator.BASEBALL_SIZE) { // 모두 맞춘 경우: 3스트라이크
             return true;
         }
         return false;

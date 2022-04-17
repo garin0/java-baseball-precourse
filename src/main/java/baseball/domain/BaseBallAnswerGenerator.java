@@ -13,6 +13,7 @@ public class BaseBallAnswerGenerator {
     public BaseBallAnswerGenerator() {
         this.generatedBaseBalls = new LinkedHashSet<>();
         while(this.generatedBaseBalls.size() != BASEBALL_SIZE) {
+            // 랜덤 생성
             int randomNum = Randoms.pickNumberInRange(BASEBALL_MIN_NUM, BASEBALL_MAX_NUM);
             this.generatedBaseBalls.add(randomNum);
         }

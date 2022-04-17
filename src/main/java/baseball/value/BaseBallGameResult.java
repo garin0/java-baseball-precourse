@@ -2,6 +2,7 @@ package baseball.value;
 
 import baseball.common.Message;
 import baseball.domain.BaseBallAnswerGenerator;
+import baseball.util.BaseBallUtil;
 
 public class BaseBallGameResult {
     private int strikeCount;
@@ -54,15 +55,8 @@ public class BaseBallGameResult {
 
     private String printStrike(String message) {
         if (strikeCount > 0) {
-            message += addWhiteSpace(message) + strikeCount + Message.STRIKE_MESSAGE;
+            message += BaseBallUtil.addWhiteSpace(message) + strikeCount + Message.STRIKE_MESSAGE;
         }
         return message;
-    }
-
-    private String addWhiteSpace(String message) {
-        if (!message.isEmpty()) {
-            return " ";
-        }
-        return "";
     }
 }

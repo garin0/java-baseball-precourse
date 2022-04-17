@@ -22,15 +22,17 @@ class BaseBallRefereeTest {
     }
 
     @Test
-    void 낫싱_테스트() {
-        BaseBallGameResult baseBallGameResult = baseballReferee.matchBalls(Arrays.asList(1,2,3));
+    @DisplayName("낫싱 테스트")
+    void countNothing() {
+        BaseBallGameResult baseBallGameResult = baseballReferee.matchBalls(Arrays.asList(1,2,7));
 
         assertThat(baseBallGameResult.getStrikeCount()).isEqualTo(0);
         assertThat(baseBallGameResult.getBallCount()).isEqualTo(0);
     }
 
     @Test
-    void 볼_테스트() {
+    @DisplayName("볼 테스트")
+    void countBall() {
         BaseBallGameResult baseBallGameResult = baseballReferee.matchBalls(Arrays.asList(9,2,3));
 
         assertThat(baseBallGameResult.getStrikeCount()).isEqualTo(0);
@@ -38,7 +40,8 @@ class BaseBallRefereeTest {
     }
 
     @Test
-    void 스트라이크_테스트() {
+    @DisplayName("스트라이크 테스트")
+    void countStrike() {
         BaseBallGameResult baseBallGameResult = baseballReferee.matchBalls(Arrays.asList(5,9,3));
 
         assertThat(baseBallGameResult.getStrikeCount()).isEqualTo(1);

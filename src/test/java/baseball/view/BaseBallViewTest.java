@@ -23,15 +23,14 @@ class BaseBallViewTest {
 
     @Test
     @DisplayName("게임 종료 여부 테스트")
-    void GameEnd() {
+    void gameEnd() {
         assertThat(view.getSelectedMenu("2")).isEqualTo(BaseBallGameView.QUIT);
     }
 
     @Test
     @DisplayName("게임 여부 테스트 예외 (1,2 이외)")
-    void GameSelectMenuException() {
+    void gameSelectMenuException() {
         assertThatThrownBy(() -> view.getSelectedMenu("3"))
                 .isInstanceOf(IllegalArgumentException.class);
     }
-
 }
