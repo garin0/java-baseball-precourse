@@ -15,6 +15,19 @@
 - 게임을 종료한 후 게임을 다시 시작하거나 완전히 종료할 수 있다.
 - 사용자가 잘못된 값을 입력할 경우 `IllegalArgumentException`을 발생시킨 후 애플리케이션은 종료되어야 한다.
 
+## 제약사항
+- 숫자 야구게임을 실행하는 시작점은 src/main/java 폴더의 baseball.Application의 main()이다.
+- 숫자 야구게임은 JDK 8 버전에서 실행가능해야 한다. JDK 8에서 정상 동작하지 않을 경우 0점 처리한다.
+- JDK에서 제공하는 Random 및 Scanner API 대신 camp.nextstep.edu.missionutils에서 제공하
+는 Randoms 및 Console API를 사용하여 구현해야 한다.
+- 프로그램 구현을 완료했을 때 src/test/java 폴더의 baseball.ApplicationTest에 있는 2개의 Test Case가 성공해야 한다. 테스트가 실패할 경우 0점 처리한다.
+- 자바 코드 컨벤션을 지키면서 프로그래밍한다.
+- indent(인덴트, 들여쓰기) depth를 2가 넘지 않도록 구현한다. 1까지만 허용한다.
+- 자바 8에 추가된 stream api를 사용하지 않고 구현해야 한다. 단, 람다는 사용 가능하다.
+- else 예약어를 쓰지 않는다.
+- 함수(또는 메소드)의 길이가 10라인을 넘어가지 않도록 구현한다.
+- 도메인 로직에 단위 테스트를 구현해야 한다. 단, UI(System.out, System.in, Scanner) 로직은 제외
+
 ## 기능 목록
 ### 야구번호 생성
 1. 1~9로 중복되지 않은 서로 다른 세자리 수 ex) 923
