@@ -13,7 +13,7 @@ public class BaseBallUtilTest {
     @DisplayName("문자열 Array로 변경")
     void addStringToArray() {
         String numStr = "326";
-        List<Integer> integerList = BaseBallUtil.addStringToArray(numStr);
+        List<Integer> integerList = StringUtil.toArray(numStr);
         assertThat(integerList.size()).isEqualTo(BaseBallAnswerGenerator.BASEBALL_SIZE);
     }
 
