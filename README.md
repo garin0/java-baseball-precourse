@@ -40,3 +40,21 @@
 ### 반복 진행
 1. 정답을 맞출때까지 반복 입력
 2. 사용자의 입력을 받아 게임 진행 여부 처리
+
+## 구조
+### common
+1. Message: 공통 출력 메세지 모음
+
+### domain
+1. BaseBallAnswerGenerator: 게임을 시작할 때 자동으로 정답 생성
+2. BaseBallGame: 야구 게임. 게임에 필요한 요소(view, referee)를 가지고 있음.
+3. BaseBallReferee: 사용자 입력값과 정답 체크
+
+### util
+1. StringUtil: String 관련 처리 담은 util
+
+### value
+1. BaseBallGameResult: 게임 결과를 담는 VO
+
+### view
+1. BaseBallGameView: 게임 진행 및 결과에 대한 input, output 처리
